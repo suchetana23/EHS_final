@@ -6,11 +6,15 @@ mydb = m.connect(
 	host = "localhost",
 	user = "root",
 	password = "root@123",
+	database = "patient",
  	auth_plugin = "mysql_native_password"
 )
 
 mycursor = mydb.cursor()
-mycursor.execute("create database patient")
-mycursor.execute("CREATE TABLE Add  (Reg No. Varchar(50) Primary key, First Name Varchar(20), Last Name(20), Gender ENUM('Male', 'Female', 'Other'), DOB VARCHAR(20), Contact_number VARCHAR(20), Registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-
+reg_name = input("Enter Registration number: ")
+first_name = input("Enter first name: ")
+last_name = input("Enter last name: ")
+gender = input("Enter patient's gender (Male/Female/Other): ")
+dob = input("Enter date of birth: ")
+contact_number = input("Enter patient's contact number: ")
 
